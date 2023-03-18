@@ -468,7 +468,7 @@ public class DryingRackEntity extends AbstractDecorationEntity {
                 if ((optional = this.getRecipeFor(itemStack = player.getStackInHand(hand))).isPresent()) {
                     this.dryingTotalTime = optional.get().getCookTime();
                     this.dryingTime = 0;
-                    this.setHeldItemStack(itemStack.split(1));
+                    this.setHeldItemStack(itemStack);
                     this.emitGameEvent(GameEvent.BLOCK_CHANGE, player);
                     this.updateListeners();
 

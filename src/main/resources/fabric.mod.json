@@ -5,7 +5,7 @@
 
   "name": "QuantumGoddess' Adventuring",
   "description": "QuantumGoddess presents: Adventuring! A mod to enhance your adventuring experience in Minecraft.",
-  "authors": ["Me!"],
+  "authors": ["QuantumGoddess"],
   "contact": {
     "homepage": "https://fabricmc.net/",
     "sources": "https://github.com/FabricMC/fabric-example-mod"
@@ -16,7 +16,8 @@
 
   "environment": "*",
   "entrypoints": {
-    "main": ["net.quantumgoddess.adventuring.AdventuringMod"]
+    "main": ["net.quantumgoddess.adventuring.AdventuringMod"],
+    "client": ["net.quantumgoddess.adventuring.client.AdventuringClientMod"]
   },
   "mixins": ["quantumadventuring.mixins.json"],
 

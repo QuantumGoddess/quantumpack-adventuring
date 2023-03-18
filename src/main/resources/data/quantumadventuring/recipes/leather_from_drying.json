@@ -1,0 +1,7 @@
+{
+  "type": "quantumadventuring:drying_rack",
+  "ingredient": {
+    "item": "minecraft:rotten_flesh"
+  },
+  "result": "minecraft:leather"
+}

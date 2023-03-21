@@ -92,7 +92,7 @@ public class DryingRackEntity extends AbstractDecorationEntity {
             SimpleInventory inventory;
             ItemStack itemStack2;
             ItemStack itemStack = this.getHeldItemStack();
-            if (itemStack.isEmpty())
+            if (itemStack.isEmpty() || getRecipeFor(itemStack) == null)
                 return;
             bl = true;
             this.dryingTime = this.dryingTime + 1;
@@ -424,6 +424,8 @@ public class DryingRackEntity extends AbstractDecorationEntity {
         nbt.putByte("Facing", (byte) this.facing.getId());
         nbt.putBoolean("Invisible", this.isInvisible());
         nbt.putBoolean("Fixed", this.fixed);
+        nbt.putByte("DryingTime", (byte) this.dryingTime);
+        nbt.putByte("DryingTotalTime", (byte) this.dryingTotalTime);
     }
 
     @Override
@@ -448,6 +450,14 @@ public class DryingRackEntity extends AbstractDecorationEntity {
         this.setFacing(Direction.byId(nbt.getByte("Facing")));
         this.setInvisible(nbt.getBoolean("Invisible"));
         this.fixed = nbt.getBoolean("Fixed");
+
+        if (nbt.contains("DryingTime", NbtElement.INT_TYPE)) {
+            this.dryingTime = nbt.getByte("DryingTime");
+
+        }
+        if (nbt.contains("DryingTotalTime", NbtElement.INT_TYPE)) {
+            this.dryingTotalTime = nbt.getByte("DryingTotalTime");
+        }
     }
 
     @Override

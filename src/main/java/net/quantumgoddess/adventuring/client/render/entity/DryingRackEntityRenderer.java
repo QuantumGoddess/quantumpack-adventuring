@@ -44,7 +44,7 @@ public class DryingRackEntityRenderer<T extends DryingRackEntity>
         super(context);
         this.itemRenderer = context.getItemRenderer();
         this.blockRenderManager = context.getBlockRenderManager();
-        this.model = new DryingRackEntityModel(context.getPart(QuantumEntityModelLayers.DRYING_RACK));
+        this.model = new DryingRackEntityModel<DryingRackEntity>(context.getPart(QuantumEntityModelLayers.DRYING_RACK));
     }
 
     @Override

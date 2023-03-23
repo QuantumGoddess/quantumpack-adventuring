@@ -9,8 +9,10 @@ import net.quantumgoddess.adventuring.entity.QuantumEntityType;
 
 public class QuantumItems {
     public static final Item DRYING_RACK = new DryingRackItem(QuantumEntityType.DRYING_RACK, new FabricItemSettings());
+    public static final Item SLEEPING_BAG = new SleepingBagItem(new FabricItemSettings());
 
     public static void registerAll() {
         Registry.register(Registries.ITEM, new Identifier("quantumadventuring", "drying_rack"), DRYING_RACK);
+        Registry.register(Registries.ITEM, new Identifier("quantumadventuring", "sleeping_bag"), SLEEPING_BAG);
     }
 }

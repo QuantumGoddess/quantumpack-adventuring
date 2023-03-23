@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "minecraft:wool"
+    }
+  },
+  "pattern": ["###"],
+  "result": {
+    "item": "quantumadventuring:sleeping_bag"
+  },
+  "show_notification": true
+}
